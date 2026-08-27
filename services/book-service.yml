@@ -1,5 +1,5 @@
 server:
-  port: 8082
+  port: 0
 
 spring:
   datasource:
@@ -20,16 +20,20 @@ spring:
         location: classpath:gcp-key.json
       project-id: project-c2d114f1-e0c4-497d-a05
 
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
-  instance:
-    prefer-ip-address: true
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka/
+#  instance:
+#    prefer-ip-address: true
 
 gcp:
   storage:
     bucket-name: library-book-images-bucket
+
+eureka:
+  instance:
+    instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
 
 #
 #server:
