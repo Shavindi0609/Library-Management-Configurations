@@ -1,0 +1,59 @@
+server:
+  port: 8082
+
+spring:
+  datasource:
+    url: jdbc:mysql://34.143.136.214:3306/book_db?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: shavindi
+    password: 'Shavindi2003#'
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+  cloud:
+    gcp:
+      credentials:
+        location: classpath:gcp-key.json
+      project-id: project-c2d114f1-e0c4-497d-a05
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+gcp:
+  storage:
+    bucket-name: library-book-images-bucket
+
+#
+#server:
+#  port: 8082
+#
+#spring:
+#  application:
+#    name: BOOK-SERVICE
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/book_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+#    username: root
+#    password: '#Shanu0609@'
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQLDialect
+#
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka/
+#  instance:
+#    prefer-ip-address: true
