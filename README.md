@@ -2,9 +2,9 @@
 
 ## Student Information
 - **Student Name:** Shavindi R. Aloka
-- **Student Number:** [ඔබේ ශිෂ්‍ය අංකය මෙහි ඇතුළත් කරන්න]
-- **Slack Handle:** [ඔබේ Slack නම]
-- **GCP Project ID:** [ඔබේ Google Cloud Project ID එක]
+- **Student Number:** [241711095]
+- **Slack Handle:** [Shavindi Aloka]
+- **GCP Project ID:** [project-c2d114f1-e0c4-497d-a05]
 
 ---
 
